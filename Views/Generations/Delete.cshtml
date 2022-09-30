@@ -1,0 +1,25 @@
+@model Pokedex.Models.Generation
+@{
+    ViewData["Title"] = "Região";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Regiões do Mundo de Pokémon</h1>
+<h3>Tem certeza que deseja excluir esta Região?</h3>
+<hr />
+    <div class="row">
+    <div class="col">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" disabled/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Excluir" class="btn btn-danger" />
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+    
